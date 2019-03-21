@@ -14,14 +14,14 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="RecominderWatch" customModuleProvider="target">
                     <items>
-                        <button width="1" alignment="left" title="Button" id="seO-eY-HAb">
+                        <button width="1" alignment="left" title="Add Water" backgroundImage="addwaterbutton" id="seO-eY-HAb">
                             <connections>
                                 <segue destination="rOp-GM-3NJ" kind="push" id="vek-NK-SQJ"/>
                             </connections>
                         </button>
                         <group width="1" alignment="left" layout="overlap" id="YiV-Qd-6Pe" userLabel="Running">
                             <items>
-                                <imageView alignment="left" image="watchdatablock2" id="kOw-hw-qcr"/>
+                                <imageView alignment="left" image="heartrateblocknew" id="kOw-hw-qcr"/>
                                 <label alignment="center" text="Label" baselineAdjustment="alignCenters" id="zVR-M2-WNy">
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </label>
@@ -30,7 +30,7 @@
                         </group>
                         <group width="1" alignment="left" layout="overlap" id="17u-12-MXY" userLabel="Heart">
                             <items>
-                                <imageView alignment="left" image="watchdatablock" id="MKk-1s-y14"/>
+                                <imageView alignment="left" image="newpanel2" id="MKk-1s-y14"/>
                                 <label alignment="center" text="Label" baselineAdjustment="alignCenters" id="l11-Hb-Oz4">
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </label>
@@ -39,7 +39,7 @@
                         </group>
                         <group width="1" alignment="left" layout="overlap" id="Ozn-C0-MUh" userLabel="Water Amount">
                             <items>
-                                <imageView alignment="left" image="watchdatablock3" id="y7R-u2-KrJ"/>
+                                <imageView alignment="left" image="newpanel3" id="y7R-u2-KrJ"/>
                                 <label alignment="center" text="Label" baselineAdjustment="alignCenters" id="x2R-fd-JcS">
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </label>
@@ -48,7 +48,7 @@
                         </group>
                         <group width="1" alignment="left" layout="overlap" id="l5P-7y-c2V" userLabel="Time">
                             <items>
-                                <imageView alignment="left" image="watchdatablock4" id="8pw-mw-HgV"/>
+                                <imageView alignment="left" image="newpanel4" id="8pw-mw-HgV"/>
                                 <label alignment="center" text="Label" baselineAdjustment="alignCenters" id="k07-EZ-gkw">
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </label>
@@ -57,12 +57,16 @@
                         </group>
                     </items>
                     <connections>
-                        <outlet property="heartRateLabel" destination="l11-Hb-Oz4" id="x4V-l0-kZO"/>
+                        <outlet property="addWaterButton" destination="seO-eY-HAb" id="kJ2-27-5nu"/>
+                        <outlet property="caloresPanel" destination="MKk-1s-y14" id="nAj-yW-iCM"/>
+                        <outlet property="consumptionLabel" destination="8pw-mw-HgV" id="pg5-wR-5hN"/>
+                        <outlet property="heartRateLabel" destination="kOw-hw-qcr" id="mxJ-x3-l5y"/>
                         <outlet property="runningLabel" destination="zVR-M2-WNy" id="BpR-Ox-u7l"/>
+                        <outlet property="waterPanel" destination="y7R-u2-KrJ" id="Mbc-78-97U"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-68" y="59"/>
+            <point key="canvasLocation" x="-112" y="58"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -105,7 +109,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="58"/>
+            <point key="canvasLocation" x="189" y="58"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
