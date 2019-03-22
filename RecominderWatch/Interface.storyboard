@@ -92,21 +92,35 @@
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Second Interface Controller-->
         <scene sceneID="tf6-7o-w8a">
             <objects>
-                <controller id="rOp-GM-3NJ">
+                <controller id="rOp-GM-3NJ" customClass="SecondInterfaceController" customModule="RecominderWatch_Extension">
                     <items>
                         <group width="1" height="88" alignment="left" id="uIh-At-awo">
                             <items>
-                                <button width="30" height="30" alignment="left" verticalAlignment="center" backgroundImage="minus" id="bvn-Vw-boW"/>
-                                <label width="30" alignment="center" verticalAlignment="center" text="7 oz" id="h4F-VC-IFm"/>
-                                <button width="30" height="30" alignment="right" verticalAlignment="center" backgroundImage="plus" id="fEd-0G-Lga"/>
+                                <button width="30" height="30" alignment="left" verticalAlignment="center" backgroundImage="minus" id="bvn-Vw-boW">
+                                    <connections>
+                                        <action selector="minusAction" destination="rOp-GM-3NJ" id="flU-Ma-eCe"/>
+                                    </connections>
+                                </button>
+                                <label width="41" height="20" alignment="center" verticalAlignment="center" text="7 oz" id="h4F-VC-IFm"/>
+                                <button width="30" height="30" alignment="right" verticalAlignment="center" backgroundImage="plus" id="fEd-0G-Lga">
+                                    <connections>
+                                        <action selector="addAction" destination="rOp-GM-3NJ" id="PQU-kX-T3T"/>
+                                    </connections>
+                                </button>
                             </items>
                         </group>
                         <label width="87" alignment="center" text="MOST: 0 oz" id="Di1-Im-PWF"/>
-                        <button width="1" alignment="left" title="Add Water" backgroundImage="addwaterbutton" id="8jn-V5-OXi"/>
+                        <button width="1" height="35" alignment="left" title="Add Water" backgroundImage="addwaterbutton" id="8jn-V5-OXi"/>
                     </items>
+                    <connections>
+                        <outlet property="addWaterButton" destination="8jn-V5-OXi" id="DwU-Bm-pE7"/>
+                        <outlet property="minusButton" destination="bvn-Vw-boW" id="HwO-lB-l82"/>
+                        <outlet property="ouncesLabel" destination="h4F-VC-IFm" id="mDg-da-HaQ"/>
+                        <outlet property="plusButton" destination="fEd-0G-Lga" id="Igx-Sa-0gp"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="189" y="58"/>
