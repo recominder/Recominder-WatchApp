@@ -104,7 +104,7 @@
                                         <action selector="minusAction" destination="rOp-GM-3NJ" id="flU-Ma-eCe"/>
                                     </connections>
                                 </button>
-                                <label width="41" height="20" alignment="center" verticalAlignment="center" text="7 oz" id="h4F-VC-IFm"/>
+                                <label width="41" height="20" alignment="center" verticalAlignment="center" text="0 oz" id="h4F-VC-IFm"/>
                                 <button width="30" height="30" alignment="right" verticalAlignment="center" backgroundImage="plus" id="fEd-0G-Lga">
                                     <connections>
                                         <action selector="addAction" destination="rOp-GM-3NJ" id="PQU-kX-T3T"/>
@@ -124,6 +124,17 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="189" y="58"/>
+        </scene>
+        <!--Third Interface Controller-->
+        <scene sceneID="tZj-sO-JAS">
+            <objects>
+                <controller id="9c7-Tb-Lmp" customClass="ThirdInterfaceController" customModule="RecominderWatch_Extension">
+                    <items>
+                        <imageView height="151" alignment="center" verticalAlignment="bottom" id="Ea9-QU-EYf"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-211" y="463"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
