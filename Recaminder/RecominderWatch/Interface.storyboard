@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="RecominderWatch" customModuleProvider="target">
+                    <items>
+                        <button width="1" alignment="left" title="Add Water" backgroundImage="addwaterbutton" id="seO-eY-HAb">
+                            <connections>
+                                <segue destination="rOp-GM-3NJ" kind="push" id="vek-NK-SQJ"/>
+                            </connections>
+                        </button>
+                        <group width="1" alignment="left" layout="overlap" id="H4u-YF-Xup">
+                            <items>
+                                <imageView alignment="left" image="heartrateblocknew" id="TlH-I2-KQu"/>
+                                <label alignment="center" verticalAlignment="center" text="Label" id="cIz-Ri-Q8L">
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="overlap" id="17u-12-MXY" userLabel="Heart">
+                            <items>
+                                <imageView alignment="left" image="newpanel2" id="MKk-1s-y14"/>
+                                <label alignment="center" text="Label" baselineAdjustment="alignCenters" id="l11-Hb-Oz4">
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </label>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                        </group>
+                        <group width="1" alignment="left" layout="overlap" id="Ozn-C0-MUh" userLabel="Water Amount">
+                            <items>
+                                <imageView alignment="left" image="newpanel3" id="y7R-u2-KrJ"/>
+                                <label alignment="center" text="Label" baselineAdjustment="alignCenters" id="x2R-fd-JcS">
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </label>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                        </group>
+                        <group width="1" alignment="left" layout="overlap" id="l5P-7y-c2V" userLabel="Time">
+                            <items>
+                                <imageView alignment="left" image="newpanel4" id="8pw-mw-HgV"/>
+                                <label alignment="center" text="Label" baselineAdjustment="alignCenters" id="k07-EZ-gkw">
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </label>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="addWaterButton" destination="seO-eY-HAb" id="kJ2-27-5nu"/>
+                        <outlet property="caloresPanel" destination="MKk-1s-y14" id="nAj-yW-iCM"/>
+                        <outlet property="consumptionLabel" destination="8pw-mw-HgV" id="pg5-wR-5hN"/>
+                        <outlet property="waterPanel" destination="y7R-u2-KrJ" id="Mbc-78-97U"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-109" y="23"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="It's time to take a drink!" numberOfLines="0" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="RecominderWatch" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+        <!--Second Interface Controller-->
+        <scene sceneID="tf6-7o-w8a">
+            <objects>
+                <controller id="rOp-GM-3NJ" customClass="SecondInterfaceController" customModule="RecominderWatch_Extension">
+                    <items>
+                        <group width="1" height="88" alignment="left" id="uIh-At-awo">
+                            <items>
+                                <button width="30" height="30" alignment="left" verticalAlignment="center" backgroundImage="minus" id="bvn-Vw-boW">
+                                    <connections>
+                                        <action selector="minusAction" destination="rOp-GM-3NJ" id="flU-Ma-eCe"/>
+                                    </connections>
+                                </button>
+                                <group width="67" height="47" alignment="center" verticalAlignment="center" id="RQo-Ky-Myh">
+                                    <items>
+                                        <label width="49" height="36" alignment="center" verticalAlignment="center" text="0" textAlignment="center" id="h4F-VC-IFm">
+                                            <color key="textColor" red="1" green="0.40676580269653539" blue="0.36023969912539988" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <fontDescription key="font" type="system" pointSize="43"/>
+                                        </label>
+                                        <label alignment="center" verticalAlignment="center" text="OZ" id="KJH-Il-BQb">
+                                            <fontDescription key="font" type="system" pointSize="11"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <button width="30" height="30" alignment="right" verticalAlignment="center" backgroundImage="plus" id="fEd-0G-Lga">
+                                    <connections>
+                                        <action selector="addAction" destination="rOp-GM-3NJ" id="PQU-kX-T3T"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <label width="87" alignment="center" text="MOST: 0 oz" id="Di1-Im-PWF"/>
+                        <button width="1" height="35" alignment="left" title="Add Water" backgroundImage="addwaterbutton" id="8jn-V5-OXi">
+                            <connections>
+                                <segue destination="9c7-Tb-Lmp" kind="push" id="VyH-Pj-3xo"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="addWaterButton" destination="8jn-V5-OXi" id="DwU-Bm-pE7"/>
+                        <outlet property="minusButton" destination="bvn-Vw-boW" id="HwO-lB-l82"/>
+                        <outlet property="ouncesLabel" destination="h4F-VC-IFm" id="mDg-da-HaQ"/>
+                        <outlet property="plusButton" destination="fEd-0G-Lga" id="Igx-Sa-0gp"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="181" y="23"/>
+        </scene>
+        <!--Third Interface Controller-->
+        <scene sceneID="tZj-sO-JAS">
+            <objects>
+                <controller id="9c7-Tb-Lmp" customClass="ThirdInterfaceController" customModule="RecominderWatch_Extension">
+                    <items>
+                        <group width="160" height="160" alignment="center" verticalAlignment="center" id="gXV-kp-Kqr">
+                            <items>
+                                <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="U7T-RG-yLo">
+                                    <items>
+                                        <label alignment="center" verticalAlignment="center" text="of 50 oz" id="5CX-0m-MUs"/>
+                                        <label alignment="center" text="21" id="Vjg-T5-VIi">
+                                            <color key="textColor" red="0.23761607257317729" green="0.77849148081162234" blue="1" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <fontDescription key="font" type="system" pointSize="35"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="waterRings" destination="gXV-kp-Kqr" id="OGf-JH-qnB"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="468" y="24"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="Niz-AI-uX2">
+            <objects>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="RecominderWatch" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="345"/>
+        </scene>
+    </scenes>
+</document>
