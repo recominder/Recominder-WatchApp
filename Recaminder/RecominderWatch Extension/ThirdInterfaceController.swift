@@ -9,7 +9,13 @@
 import WatchKit
 import Foundation
 
+
 class ThirdInterfaceController: WKInterfaceController {
+    
+    
+    
+
+
     @IBOutlet weak var waterRings: WKInterfaceGroup!
     @IBOutlet weak var waterDrankLabel: WKInterfaceLabel!
     @IBOutlet weak var amount: WKInterfaceLabel!
@@ -23,12 +29,14 @@ class ThirdInterfaceController: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
-        // Animate the Water consumption progress bar
+        let pls = UserDefaults.standard.integer(forKey: "waterConsumed")
+        let pls2 = pls * 2
+        let percent = Int((UserDefaults.standard.integer(forKey: "waterConsumed")) / 50 * 100)
+        print(percent)
         
+        amount.setText(String(UserDefaults.standard.integer(forKey: "waterConsumed")))
         waterRings.setBackgroundImageNamed("water-")
-        waterRings.startAnimatingWithImages(in: NSMakeRange(0,UserDefaults.standard.integer(forKey: "waterConsumed")), duration: 2, repeatCount: 1)
-        amount.
-        
+        waterRings.startAnimatingWithImages(in: NSMakeRange(0,(pls2)), duration: 2, repeatCount: 1)
         
     }
 }
