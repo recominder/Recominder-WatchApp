@@ -15,6 +15,7 @@ class SecondInterfaceController: WKInterfaceController {
     @IBOutlet weak var minusButton: WKInterfaceButton!
     @IBOutlet weak var plusButton: WKInterfaceButton!
     @IBOutlet weak var ouncesLabel: WKInterfaceLabel!
+    @IBOutlet weak var addWater: WKInterfaceButton!
     
     var ounceText: String?
     var ounceNum: Int = 0
@@ -36,15 +37,33 @@ class SecondInterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
     @IBAction func minusAction() {
-        ounceNum -= 1
-        ounceText = "\(String(ounceNum))"
-        ouncesLabel.setText(ounceText)
+        if ounceNum > 0 {
+            ounceNum -= 1
+            ounceText = "\(String(ounceNum))"
+            ouncesLabel.setText(ounceText)
+        }
+        else {
+            
+        }
     }
     
     @IBAction func addAction() {
         ounceNum += 1
         ounceText = "\(String(ounceNum))"
         ouncesLabel.setText(ounceText)
+    }
+    
+    
+    @IBAction func addWaterButtonPressed() {
+        UserDefaults.standard.set(ounceNum, forKey: "waterConsumed")
+        UserDefaults.standard.synchronize()
+        print(UserDefaults.standard.integer(forKey: "waterConsumed"))
+//        let vc = ThirdInterfaceController() //your view controller
+//        self.present(vc, animated: true, completion: nil)
+//        presentController(withName:context:)
+//        pushController(withName:context:)
+        presentController(withName: "fukit", context: nil)
+        
     }
     
 }

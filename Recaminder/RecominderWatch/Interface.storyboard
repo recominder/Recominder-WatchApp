@@ -122,7 +122,7 @@
                         <label width="87" alignment="center" text="MOST: 0 oz" id="Di1-Im-PWF"/>
                         <button width="1" height="35" alignment="left" title="Add Water" backgroundImage="addwaterbutton" id="8jn-V5-OXi">
                             <connections>
-                                <segue destination="9c7-Tb-Lmp" kind="push" id="VyH-Pj-3xo"/>
+                                <action selector="addWaterButtonPressed" destination="rOp-GM-3NJ" id="Zf5-NE-WOy"/>
                             </connections>
                         </button>
                     </items>
@@ -136,10 +136,10 @@
             </objects>
             <point key="canvasLocation" x="181" y="23"/>
         </scene>
-        <!--Third Interface Controller-->
+        <!--fukit-->
         <scene sceneID="tZj-sO-JAS">
             <objects>
-                <controller id="9c7-Tb-Lmp" customClass="ThirdInterfaceController" customModule="RecominderWatch_Extension">
+                <controller identifier="fukit" id="9c7-Tb-Lmp" customClass="ThirdInterfaceController" customModule="RecominderWatch_Extension">
                     <items>
                         <group width="160" height="160" alignment="center" verticalAlignment="center" id="gXV-kp-Kqr">
                             <items>
@@ -156,6 +156,7 @@
                         </group>
                     </items>
                     <connections>
+                        <outlet property="amount" destination="Vjg-T5-VIi" id="HtV-rT-Sxf"/>
                         <outlet property="waterRings" destination="gXV-kp-Kqr" id="OGf-JH-qnB"/>
                     </connections>
                 </controller>
